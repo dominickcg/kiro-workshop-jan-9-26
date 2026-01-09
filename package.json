@@ -1,0 +1,40 @@
+{
+  "name": "task-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Task Management System - NexusCorp Implementation",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd apps/frontend && npm run dev",
+    "dev:backend": "cd services/api-lambda && npm run dev",
+    "build": "npm run build:common && npm run build:backend && npm run build:frontend",
+    "build:common": "cd packages/common-utils && npm run build",
+    "build:backend": "cd services/api-lambda && npm run build",
+    "build:frontend": "cd apps/frontend && npm run build",
+    "test": "npm run test:common && npm run test:backend && npm run test:frontend",
+    "test:common": "cd packages/common-utils && npm run test",
+    "test:backend": "cd services/api-lambda && npm run test",
+    "test:frontend": "cd apps/frontend && npm run test",
+    "lint": "npm run lint:common && npm run lint:backend && npm run lint:frontend",
+    "lint:common": "cd packages/common-utils && npm run lint",
+    "lint:backend": "cd services/api-lambda && npm run lint",
+    "lint:frontend": "cd apps/frontend && npm run lint",
+    "type-check": "npm run type-check:common && npm run type-check:backend && npm run type-check:frontend",
+    "type-check:common": "cd packages/common-utils && npm run type-check",
+    "type-check:backend": "cd services/api-lambda && npm run type-check",
+    "type-check:frontend": "cd apps/frontend && npm run type-check"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "lerna": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
