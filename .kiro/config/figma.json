@@ -1,0 +1,19 @@
+{
+  "project": "task-management-system",
+  "figmaUrl": "https://www.figma.com/design/p6DkcwhGo9RasbGJAsR2cX/Personal-Task-Manager-In-Figma--Community-?node-id=0-1&p=f&t=7wM3c0Od4hn5B5gp-0",
+  "fileKey": "p6DkcwhGo9RasbGJAsR2cX",
+  "nodes": {
+    "main": "0:1",
+    "taskList": "3:78",
+    "taskCard": "3:261"
+  },
+  "lastUpdated": "2025-01-09",
+  "designTokens": {
+    "extracted": true,
+    "version": "1.0.0"
+  },
+  "codeConnect": {
+    "enabled": true,
+    "mappings": []
+  }
+}
